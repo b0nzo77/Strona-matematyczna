@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DodawanieDo10000</title>
+    <link rel="stylesheet" href="css2.css">
+</head>
+<body>
+    <h1>Dodawanie do 10000</h1>
+    <div class="przyciski1">
+    <button onclick="losuj()">Losuj</button>
+    </div>
+    <div id="prosto">
+    <p id="a">?</p>
+    <p> + </p>
+    <p id="b">?</p>
+    <p> = </p>
+    <input id="d" type="number"><br><br>
+    </div>
+    <div class="przyciski2">
+    <button onclick="sprawdz()">Sprawdź</button>
+    </div>
+    <p id="e"></p>
+    <script>
+        function losuj(){
+            do{
+                a=Math.floor(Math.random()*10001);
+                b=Math.floor(Math.random()*10001);
+            }
+            while(a+b>10000);
+            document.getElementById("a").innerHTML=a;
+            document.getElementById("b").innerHTML=b;
+        }
+        
+        function sprawdz(){
+            d=document.getElementById("d").value;
+            if(d==a+b)
+            document.getElementById("e").innerHTML="TAK 🙂";
+            else if(d=="")
+            document.getElementById("e").innerHTML="Nie podałeś odpowiedzi!";
+            else
+            document.getElementById("e").innerHTML="NIE ☹️";
+        }
+</script>
+
+<div class="przyciskigl">
+<a href="glowna.html"><button>Strona główna</button></a>
+<br>
+</div>
+</body>
+</html>
