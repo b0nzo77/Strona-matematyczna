@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strona główna</title>
+    <link rel="stylesheet" href="css.css">
+</head>
+<body>
+    <div id="lacz">
+    <img src="superkid.png">
+    <h1 id="stronaglowna">Zadania matematyczne dla klasy 4</h1>
+    <div id="zegar">
+    <span id="hrs">00</span>
+    <span>:</span>
+    <span id="min">00</span>
+    <span>:</span>
+    <span id="sec">00</span>
+    </div>
+    <script>
+        let hrs=document.getElementById("hrs");
+        let min=document.getElementById("min");
+        let sec=document.getElementById("sec");
+        setInterval(()=>{
+            let currentTime= new Date();
+
+        hrs.innerHTML=(currentTime.getHours()<10?"0":"") + currentTime.getHours();
+        min.innerHTML=(currentTime.getMinutes()<10?"0":"") + currentTime.getMinutes();;
+        sec.innerHTML=(currentTime.getSeconds()<10?"0":"") + currentTime.getSeconds();;
+        },1000)
+        </script>
+    </div>
+    <h3>Na tej stronie znajdziesz sporo zadań na poziomie 4 klasy, które pomogą ci w nauce!</h3>
+    <div id="zadania">
+    <h4 id="zad">Zadania</h4>
+    <h4>Dodawanie do 10000</h4>
+    <a href="dodawaniedo10000.html"><button>Sprawdź się</button></a>
+    <h4>Mnożenie do 100</h4>
+    <a href="mnozeniedo100.html"><button>Sprawdź się</button></a>
+    <h4>Dzielenie do 100</h4>
+    <a href="dzieleniedo100.html"><button>Sprawdź się</button></a>
+    <h4>Mnożenie do 1000</h4>
+    <a href="mnozeniedo1000.html"><button>Sprawdź się</button></a>
+    <h4>Dzielenie do 1000</h4>
+    <a href="dzieleniedo1000.html"><button>Sprawdź się</button></a>
+    </div>
+    <br>
+    <footer id="stopka">
+        Autor: Filip Migdał &copy;
+    </footer>
+</body>
+</html>
